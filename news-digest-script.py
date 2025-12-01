@@ -32,7 +32,7 @@ try:
     EMAIL_USERNAME = require_env("EMAIL_USERNAME")
     EMAIL_PASSWORD = require_env("EMAIL_PASSWORD")
     EMAIL_FROM = os.getenv("EMAIL_FROM", EMAIL_USERNAME)
-    EMAIL_TO = [email.strip() for email in require_env("EMAIL_TO").split(",")]
+    EMAIL_TO = [email.strip() for email in require_env("EMAIL_TO").split("|")]
 
     _raw_queries = require_env("NEWS_QUERIES")
     NEWS_QUERIES = [q.strip() for q in _raw_queries.split("|") if q.strip()]
