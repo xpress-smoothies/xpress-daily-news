@@ -156,7 +156,7 @@ def compile_digest():
             for item in items:
                 # Source as hyperlink
                 if item['source']:
-                    src_html = f"<br/><a href='{item['link']}'>Read the full article at {item['source']}</a>"
+                    src_html = f"<br/><br/>→&nbsp;&nbsp;<a href='{item['link']}'>Read the full article at {item['source']}</a><br/><br/>"
                     src_text = f"[{item['source']}]"
                 else:
                     src_html = ""
